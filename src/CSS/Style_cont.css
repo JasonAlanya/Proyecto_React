@@ -1,0 +1,9 @@
+.contenedor{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+.form-control{
+    width: 50px;
+    
+}

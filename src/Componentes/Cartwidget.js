@@ -1,6 +1,6 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {Dropdown, Nav} from 'react-bootstrap';
+import {Dropdown} from 'react-bootstrap';
 import carrito from '../Imagenes/carrito.png';
 
 export default function Carrito(props){

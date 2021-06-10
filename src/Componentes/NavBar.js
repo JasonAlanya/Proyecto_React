@@ -14,6 +14,6 @@ export default function NavBar(){
                 <Nav.Link href="#contact">Contactanos</Nav.Link>
                 <Carrito saludo="Bienvenido a la sección del carrito" />
             </Nav>
-    </Navbar>
+        </Navbar>
     )
 }
