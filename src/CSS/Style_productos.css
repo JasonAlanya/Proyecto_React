@@ -1,0 +1,49 @@
+.producto{
+    background-color: #fff;
+    justify-content: center;
+    display: grid;
+    padding: 0 20%;
+}
+
+.producto:hover{
+    transform: translate(0, -10px);
+}
+
+.vector{
+    padding-top: 3em;
+    display: flex;
+    justify-content: center;
+}
+
+.producto h2{
+    padding-top: 1em;
+    text-align: center;
+    font-size: 2em;
+    color: #003862;
+}
+
+.producto img{
+    width: 70%;
+    margin: 0 15%;
+}
+
+.producto button{
+    margin: 2em 0;
+    border: 0;
+    background-color: #003862;
+    padding: 0.5em 0;
+}
+
+.producto button:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.producto a{
+    padding: 2em 2em;
+    height: 100vh;
+    color: #fff;
+    text-decoration: none;
+    height: 100%;
+    width: 100%;
+}
