@@ -7,7 +7,8 @@ function App() {
   return (
     <div className="App">
       <NavBar/>
-      <Contador stock="10" inicial="1" />
+      {//<Contador stock="10" inicial="1" />
+      }
       <Item_list_container/>
     </div>
   );

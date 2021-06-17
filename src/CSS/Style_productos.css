@@ -4,10 +4,15 @@
     display: grid;
     padding: 0 20%;
 }
-
-.producto:hover{
-    transform: translate(0, -10px);
+.producto div{
+    background-color: #fff;
+    justify-content: center;
+    display: grid;
+    padding: 0 20%;
 }
+/*.producto:hover{
+    transform: translate(0, -10px);
+}*/
 
 .vector{
     padding-top: 3em;
@@ -27,7 +32,7 @@
     margin: 0 15%;
 }
 
-.producto button{
+/*.producto button{
     margin: 2em 0;
     border: 0;
     background-color: #003862;
@@ -46,4 +51,4 @@
     text-decoration: none;
     height: 100%;
     width: 100%;
-}
+}*/
