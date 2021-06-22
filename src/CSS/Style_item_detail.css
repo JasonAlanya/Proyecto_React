@@ -1,0 +1,17 @@
+.modal-title{
+    margin-left: auto;
+}
+
+.producto_img{
+    margin: auto 10%;
+    width: 80%;
+}
+
+h1{
+    font-size: 1rem;
+}
+
+h2{
+    text-align: center;
+    font-size: 1.5rem;
+}

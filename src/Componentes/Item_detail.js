@@ -1,6 +1,8 @@
-import React from 'react';
+import React, {useState} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {Button} from 'react-bootstrap';
+import {Button, Modal} from 'react-bootstrap';
+import '../CSS/Style_item_detail.css'
+//import Modal from 'react-bootstrap/Modal'
 
 export default function Item_detail(props){
     const nombre= props.nombre;
@@ -25,9 +27,37 @@ export default function Item_detail(props){
         
     }
 
+    const [show, setShow] = useState(false);
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+
     return (
         <div>
-            <Button variant="outline-primary" onClick={getCarItems}>Información</Button>
+            <Button variant="primary" onClick={handleShow}>
+                Información
+            </Button>
+
+            <Modal
+                show={show}
+                onHide={handleClose}
+                backdrop="static"
+                keyboard={false}
+            >
+                <Modal.Header closeButton>
+                <Modal.Title>{props.nombre}</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</h1>
+                <img className="producto_img" src={props.imagen} alt="Imagen de los productos" width="80%" margin="auto 10%" />
+                <h2>{props.precio}</h2>
+                </Modal.Body>
+                <Modal.Footer>
+                <Button variant="secondary" onClick={handleClose}>
+                    Cerrar
+                </Button>
+                <Button variant="primary">Comprar</Button>
+                </Modal.Footer>
+            </Modal>
         </div>
     )
 
