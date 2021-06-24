@@ -1,10 +1,10 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-export default function Contact(){
+export default function Cart(){
     return(
         <div>
-            Contacto
+            Carrito
         </div>
     )
 }

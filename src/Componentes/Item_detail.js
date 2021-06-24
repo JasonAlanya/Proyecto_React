@@ -2,10 +2,11 @@ import React, {useState} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Button, Modal} from 'react-bootstrap';
 import '../CSS/Style_item_detail.css'
-//import Modal from 'react-bootstrap/Modal'
+import Contador from './Contador'
+import {NavLink} from "react-router-dom"
 
 export default function Item_detail(props){
-    const nombre= props.nombre;
+    /*const nombre= props.nombre;
     const precio= props.precio;
     function getCarItems(){
         let promesa = new Promise((resolve,reject) =>{
@@ -25,11 +26,29 @@ export default function Item_detail(props){
                 console.log(error);
             })
         
-    }
+    }*/
 
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
+
+    const initial=0;
+    const [mostrar, setmostrar] =useState(false)
+
+    const[count, setcount] =useState(initial)
+    const incrementar =()=>{
+        setcount(prevcount => prevcount+1)
+        setmostrar(true)
+    }
+    const decrementar =()=>{
+        if(count>0){
+            setcount(prevcount => prevcount-1)
+            if(count==1){
+                setmostrar(false)
+            }
+        }
+    }
+
 
     return (
         <div>
@@ -50,12 +69,19 @@ export default function Item_detail(props){
                 <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</h1>
                 <img className="producto_img" src={props.imagen} alt="Imagen de los productos" width="80%" margin="auto 10%" />
                 <h2>{props.precio}</h2>
+                <Contador decrementarc={decrementar} incrementarc={incrementar} cantidad={count}/>
                 </Modal.Body>
                 <Modal.Footer>
                 <Button variant="secondary" onClick={handleClose}>
                     Cerrar
                 </Button>
-                <Button variant="primary">Comprar</Button>
+                {
+                    mostrar?<div>
+                        <NavLink to="/Cart">
+                            <Button variant="primary">Comprar</Button>
+                        </NavLink>
+                    </div>:null
+                }
                 </Modal.Footer>
             </Modal>
         </div>
