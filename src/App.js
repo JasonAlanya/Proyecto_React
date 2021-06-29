@@ -3,14 +3,17 @@ import Contador from './Componentes/Contador'
 import Item_list_container from './Componentes/Item_list_container'*/
 import React from 'react'
 import AppRouter from './Routers/AppRouter';
+import {CartProvider} from './Context/Cartcontext'
 
 function App() {
   return (
     <div className="App">
-      <AppRouter/>
-      {/*<NavBar/>
-      <Contador stock="10" inicial="1" />
-      <Item_list_container/>*/}
+      <CartProvider>
+        <AppRouter/>
+        {/*<NavBar/>
+        <Contador stock="10" inicial="1" />
+        <Item_list_container/>*/}
+      </CartProvider>
     </div>
   );
 }

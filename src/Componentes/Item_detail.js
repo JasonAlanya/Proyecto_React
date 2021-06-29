@@ -4,6 +4,8 @@ import {Button, Modal} from 'react-bootstrap';
 import '../CSS/Style_item_detail.css'
 import Contador from './Contador'
 import {NavLink} from "react-router-dom"
+import {UseCart} from '../Context/Cartcontext';
+
 
 export default function Item_detail(props){
     /*const nombre= props.nombre;
@@ -28,6 +30,8 @@ export default function Item_detail(props){
         
     }*/
 
+    const {AddToCart} = UseCart()
+
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
@@ -49,6 +53,12 @@ export default function Item_detail(props){
         }
     }
 
+    const productObject ={
+        "id": props.id,
+        "title": props.nombre,
+        "cantidad": count,
+        "precio": props.precio
+    }
 
     return (
         <div>
@@ -78,7 +88,7 @@ export default function Item_detail(props){
                 {
                     mostrar?<div>
                         <NavLink to="/Cart">
-                            <Button variant="primary">Comprar</Button>
+                            <Button variant="primary" onClick={()=>{AddToCart(productObject)}}>Comprar</Button>
                         </NavLink>
                     </div>:null
                 }

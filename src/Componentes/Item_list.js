@@ -14,7 +14,7 @@ export default function Item_list(){
     return (
         <div>
             {
-                carrito.map((post,index)=> {return <Item identificador={index} imagen={post.pictureUrl} nombre={post.title} precio={post.price}/>
+                carrito.map((post,index)=> {return <Item identificador={index} id={post.id} imagen={post.pictureUrl} nombre={post.title} precio={post.price}/>
                      })
             }
         </div>

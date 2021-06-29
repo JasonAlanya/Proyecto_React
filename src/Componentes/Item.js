@@ -6,7 +6,7 @@ export default function Item(props){
     return(
         <div class="producto" id={props.identificador}>
                 <h2>{props.nombre}</h2>
-                <Item_detail_container nombre={props.nombre} imagen={props.imagen} precio={props.precio}/>
+                <Item_detail_container id={props.id} nombre={props.nombre} imagen={props.imagen} precio={props.precio}/>
         </div>
     )
 }
