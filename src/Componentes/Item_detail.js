@@ -76,7 +76,7 @@ export default function Item_detail(props){
                 <Modal.Title>{props.nombre}</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</h1>
+                <h1>{props.descripcion}</h1>
                 <img className="producto_img" src={props.imagen} alt="Imagen de los productos" width="80%" margin="auto 10%" />
                 <h2>S/{Number.parseFloat(props.precio).toFixed(2)}</h2>
                 <Contador decrementarc={decrementar} incrementarc={incrementar} cantidad={count}/>

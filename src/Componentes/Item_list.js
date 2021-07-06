@@ -1,20 +1,32 @@
-import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import {Button} from 'react-bootstrap';
-import Item from './Item'
+import React,{useEffect, useState} from 'react';
+    import 'bootstrap/dist/css/bootstrap.min.css';
+    import {Button} from 'react-bootstrap';
+    import Item from './Item'
+    import { getFireStore } from '../firebase';
 
-export default function Item_list(){
-    const carrito=[
-        { id:"1", title:"Yogurt Gloria", price:3.00, pictureUrl:"https://jasonalanya.github.io/Proyecto_final/imagenes/productos/yogurt-gloria0.jpg"},
-        { id:"2", title:"Frugos", price:2.00, pictureUrl:"https://jasonalanya.github.io/Proyecto_final/imagenes/productos/frugos-0.jpg"},
-        { id:"3", title:"Coca Cola", price:1.50, pictureUrl:"https://jasonalanya.github.io/Proyecto_final/imagenes/productos/coca-cola-0.jpg"},
-        { id:"4", title:"Inca Cola", price:1.50, pictureUrl:"https://jasonalanya.github.io/Proyecto_final/imagenes/productos/inca-kola-0.jpg"}
-    ]
+
+    export default function Item_list(){
+    const [items, setItems]= useState([])
+    const [loading, setLoading]=useState(false)
+
+    useEffect(()=>{
+    setLoading(true)
+    const db=getFireStore()
+    const itemCollection = db.collection("Items")
+    itemCollection.get().then(
+        (querySnapshot)=>{
+        if(querySnapshot.size===0){
+            console.log('no hay resultados')
+        }
+        setItems(querySnapshot.docs.map(doc=>doc.data()))
+        }
+    ).catch((error)=>{console.log('Error buscando Items', error)}).finally(()=>{setLoading(false)})
+    },[])
 
     return (
         <div>
             {
-                carrito.map((post,index)=> {return <Item identificador={index} id={post.id} imagen={post.pictureUrl} nombre={post.title} precio={post.price}/>
+                items.map((post,index)=> {return <Item identificador={index} id={post.id} imagen={post.image} nombre={post.name} precio={post.price} descripcion={post.description}/>
                      })
             }
         </div>
