@@ -1,11 +1,10 @@
 import React,{useEffect, useState} from 'react';
-    import 'bootstrap/dist/css/bootstrap.min.css';
-    import {Button} from 'react-bootstrap';
-    import Item from './Item'
-    import { getFireStore } from '../firebase';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Item from './Item'
+import { getFireStore } from '../firebase';
 
 
-    export default function Item_list(){
+export default function Item_list(){
     const [items, setItems]= useState([])
     const [loading, setLoading]=useState(false)
 
