@@ -6,6 +6,7 @@ export default function Item_detail_container(props){
     return(
         <div>
                 <img src={props.imagen} alt="Imagen de los productos relacionados"></img>
+                <h2>{props.nombre}</h2>
                 <Item_detail id={props.id} nombre={props.nombre} precio={props.precio} imagen={props.imagen} descripcion={props.descripcion}/>
         </div>
     )

@@ -1,0 +1,281 @@
+.imagenprincipal, .imagenprincipal img{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    z-index: -1;
+}
+
+/*Estilos para la portada*/
+.portada{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.portada p{
+    animation-duration: 5s;
+    animation-name: aparecer;
+    width: 35%;
+    position: absolute;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.3);
+    color: rgb(13, 110, 245);
+    padding: 40px;
+    font-size: 3em;
+    font-family: 'Roboto', 'Russo One', sans-serif;
+}
+
+.texto-nosotros p{
+    color: #fff;
+}
+
+@media only screen and (max-width: 420px){
+    .portada_productos img{
+        width: auto;
+    }
+
+    .portada{
+        height: 50vh;
+    }
+
+    .portada p{
+        width: auto;
+        padding: 20px;
+        margin: 0 10%;
+        font-size: 1.3em;
+        color: #fff;
+    }
+
+    .productos_top h1{
+        font-size: 1.2em;
+    }
+
+    .cuadros-producto{
+        display: grid;
+        padding: 0.3em 1em 2em 1em;
+        grid-template-columns: 1fr;
+        grid-gap: 1em;
+    }
+
+    .producto h2{
+        font-size: 1.5em;
+    }
+
+    .mision, .vision{
+        display: block;
+        background-color: rgb(13, 110, 245);
+        padding-bottom: 1.8em;
+    }
+    
+    .mision h1, .vision h1{
+        text-align: center;
+        color: #fff;
+        padding: 0.5em 0;
+    }
+
+    .mision h2, .vision h2{
+        text-align:justify;
+        color: rgb(13, 110, 245);
+        background-color: #fff;
+        margin: 0 2em;
+        padding: 1em;
+        border-radius: 1em;
+        font-size: 1.1em;
+    }
+
+    .contacto{
+        display: block;
+    }
+
+    .mapa{
+        width: 100%;
+        height: 500px;
+    }
+    .mapa iframe{
+        width: 100%;
+        height: 100%
+    }
+    .formulario{
+        width: 100%;
+        padding: 5vh 10%;
+        display: grid;
+    }
+    .contenedor_form{
+        width: 100%;
+        height: 100vh;
+    }
+    .footer img{
+        width: 40%;
+        padding-top: 2em ;
+    }
+
+    .derechos{
+        display: grid;
+    }
+}
+
+/*Tablet styles*/
+@media only screen and (min-width: 420px){
+    /*Visión*/
+    .vision, .mision{
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        background-color: rgb(13, 110, 245);
+    }
+
+    .clip{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transition: 1s;
+    }
+
+    .vision .clip1{
+        background: rgb(13, 110, 245);
+        clip-path: polygon(0 0, 55% 0, 20% 100%, 0 100%);
+        display: flex;
+        align-items: center;
+    }
+    .vision .clip1 h1{
+        width: 40%;
+        text-align: center;
+        font-size: 5em;
+        color: #fff;
+    }
+
+    .vision .clip2{
+        background: url(https://jasonalanya.github.io/Proyecto_final/imagenes/vision.jpg);
+        clip-path: polygon(55% 0, 100% 0%, 100% 100%, 20% 100%);
+        display: flex;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .vision .clip2 h2{
+        display: none;
+        width: 35%;
+        position: absolute;
+        text-align: center;
+        background: rgba(0, 0, 0, 0.3);
+        color: #fff;
+        padding: 40px;
+        font-size: 2em;
+        font-family: 'Roboto', 'Russo One', sans-serif;
+    }
+
+    /*Misión*/
+    .mision .clip3{
+        background: url(https://jasonalanya.github.io/Proyecto_final/imagenes/mision.jpg);
+        clip-path: polygon(0 0, 80% 0, 45% 100%, 0 100%);
+        display: flex;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        z-index: 0;
+    }
+    .mision .clip4 h1{
+        width: 40%;
+        text-align: center;
+        font-size: 5em;
+        color: #fff;
+    }
+
+    .mision .clip4{
+        background: rgb(13, 110, 245);
+        clip-path: polygon( 80% 0,100% 0, 100% 100%, 55% 100%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 60%;
+    }
+
+    .mision .clip3 h2{
+        display: none;
+        width: 35%;
+        position: absolute;
+        text-align: center;
+        background: rgba(0, 0, 0, 0.3);
+        color: #fff;
+        padding: 40px;
+        font-size: 2em;
+        font-family: 'Roboto', 'Russo One', sans-serif;
+    }
+}
+
+@media only screen and (min-width: 420px)and (max-width: 960px){
+    .portada{
+        height: 400px;
+    }
+
+    .portada p{
+        padding: 20px;
+        font-size: 2em;
+    }
+
+    .productos_top h1{
+        font-size: 2em;
+    }
+
+    .cuadros-producto{
+        display: grid;
+        padding: 3em 4em 3em 4em;
+        grid-template-columns: 1fr;
+        grid-gap: 2em;
+    }
+
+    .vision .clip1 h1, .mision .clip4 h1{
+        font-size: 3em;
+    }
+
+    .vision .clip2{
+        padding-left: 40%;
+    }
+
+    .vision .clip2 h2, .mision .clip3 h2{
+        display: flex;
+        font-size: 0.75em;
+        width: 50%;
+    }
+
+    .mision .clip3{
+        padding-right: 40%;
+    }
+    .mapa{
+        height: 650px;
+    }
+    .formulario{
+        position: relative;
+    }
+}
+
+@media only screen and (min-width: 961px){
+    .vision:hover .clip2{
+        clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+    }
+    
+    .vision:hover .clip2 h2{
+        animation-duration: 2s;
+        animation-name: aparecer;
+        display: flex;
+    }
+
+    .mision:hover .clip3{
+        clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+    }
+    
+    .mision:hover .clip3 h2{
+        animation-duration: 2s;
+        animation-name: aparecer;
+        display: flex;
+    }
+    .contenedor_form{
+        height: 100vh;
+    }
+}

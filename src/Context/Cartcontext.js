@@ -32,9 +32,26 @@ export function CartProvider({children}){
         }
     }
 
+    function ctotal(){
+        var costo_total=0;
+        for (var i=0; i<cart.length; i++){
+                costo_total=(cart[i].precio)*(cart[i].cantidad)+costo_total;
+        }
+        return costo_total;
+    }
+
     function mostrar(){
         if(cart.length>0){
-            return cart.map((post,index)=> {return <tr><td>{index +1}</td><td>{post.title}</td><td>{post.cantidad}</td><td>S/{Number.parseFloat(post.precio).toFixed(2)}</td><td>S/{ Number.parseFloat((post.precio)*(post.cantidad)).toFixed(2)}</td><td><Button variant="danger" id={post.id} onClick={()=>removeItem(post.id)}>X</Button></td></tr>})
+            return (
+                <tbody>
+                    {cart.map((post,index)=> {return <tr><td>{index +1}</td><td>{post.title}</td><td>{post.cantidad}</td><td>S/{Number.parseFloat(post.precio).toFixed(2)}</td><td>S/{ Number.parseFloat((post.precio)*(post.cantidad)).toFixed(2)}</td><td><Button variant="danger" id={post.id} onClick={()=>removeItem(post.id)}>X</Button></td></tr>})}
+                    <tr>
+                    <td colSpan="3"></td>
+                    <td>Total</td>
+                    <td>S/{Number.parseFloat(ctotal()).toFixed(2)}</td>
+                    </tr>
+                </tbody>
+                )
         }
         else{ 
             return <tr><td colSpan="6"><center>No hay elementos en el carrito</center></td></tr>

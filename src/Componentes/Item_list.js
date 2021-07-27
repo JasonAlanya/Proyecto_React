@@ -2,7 +2,7 @@ import React,{useEffect, useState} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Item from './Item'
 import { getFireStore } from '../firebase';
-
+import "../CSS/Style_productos.css";
 
 export default function Item_list(){
     const [items, setItems]= useState([])
@@ -23,12 +23,11 @@ export default function Item_list(){
     },[])
 
     return (
-        <div>
+        <div className="producto">
             {
                 items.map((post,index)=> {return <Item identificador={index} id={post.id} imagen={post.image} nombre={post.name} precio={post.price} descripcion={post.description}/>
                      })
             }
         </div>
     )
-
 }

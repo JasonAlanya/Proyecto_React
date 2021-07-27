@@ -1,0 +1,74 @@
+.lista{
+    background-color: rgb(245, 245, 245);
+}
+.lista h1{
+    color: rgb(13, 110, 245);
+    padding-top: 1em;
+    text-align: center;
+    font-size:2em;
+}
+
+.cuadros-categoria{
+    display: grid;
+    padding: 3em 10em 3em 10em;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 4em;
+}
+
+.categoria{
+    background-color: #fff;
+    justify-content: center;
+    display: grid;
+    padding: 0 20%;
+}
+
+.vector{
+    padding-top: 3em;
+    display: flex;
+    justify-content: center;
+}
+
+.categoria h2{
+    padding-top: 1em;
+    text-align: center;
+}
+
+.categoria img{
+    width: 70%;
+    margin: 0 15%;
+}
+
+.categoria svg{
+    width: 4em;
+    height: 5em;
+}
+
+.categoria g{
+    justify-content: center;
+}
+
+.categoria path{
+    fill: rgb(13, 110, 245);
+}
+
+.categoria button{
+    margin: 2em 0;
+    border: 0;
+    background-color: rgb(13, 110, 245);
+    padding: 0.5em 0;
+    border-radius: 5px;
+}
+
+.categoria button:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.categoria a{
+    padding: 2em 2em;
+    height: 100vh;
+    color: #fff;
+    text-decoration: none;
+    height: 100%;
+    width: 100%;
+}

@@ -1,0 +1,51 @@
+.contacto{
+    display: flex;
+    background-color: rgb(13, 110, 245);
+}
+
+.mapa{
+    width: 50%;
+}
+
+.mapa iframe{
+    width: 100%;
+    height: 100%;
+}
+
+.contenedor_form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 50%;
+}
+
+.formulario{
+    width: 100%;
+    padding:10%;
+    display: grid;
+    position: absolute;
+}
+
+.formulario div{
+    color: #fff;
+    font-size: 15px;
+    margin-top: 0.5em;
+}
+
+.formulario input, .formulario textarea{
+    padding: 1px 10px;
+    margin-top: 0.5em;
+    background-color: rgb(230,230,230);
+    border: 1px solid rgb(13, 110, 245);
+    border-bottom: 2px solid rgb(255,255,255);
+}
+
+.enviar{
+    margin-top: 1em;
+    color: rgb(13, 110, 245);
+    background-color: rgb(255,255,255);
+    border: none;
+    border-radius: 6px;
+    width: 25%;
+}

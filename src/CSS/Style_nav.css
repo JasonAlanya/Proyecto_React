@@ -1,0 +1,58 @@
+.header{
+    position: fixed;
+    background-color: #343a40;
+    border-radius: 0 0 10px 10px;
+    width: 80%;
+    margin: 0 10%;
+    z-index: 1;
+}
+
+.navbar{
+    flex-wrap: nowrap;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+.gn{
+    margin: auto;
+    color: white;
+    font-size: 2rem;
+}
+
+.markt{
+    margin: auto;
+    color: rgb(21, 253, 0);
+    font-size: 1.5rem;
+}
+
+.cart{
+    padding: 0 15px;
+    margin: 0 15px;
+    display: flex;
+}
+
+.cart img{
+    height: 2em;
+}
+
+.cart p{
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    right: 5px;
+    font-size: 0.6rem;
+    background-color: rgb(255, 0, 0);
+    color: #fff;
+    border-radius: 50%;
+    width: 0.8rem;
+    height: 0.8rem;
+}
+
+a:link, a:visited, a:active{
+    text-decoration: none;
+
+}

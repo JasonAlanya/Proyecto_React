@@ -1,54 +1,40 @@
 .producto{
     background-color: #fff;
-    justify-content: center;
-    display: grid;
-    padding: 0 20%;
-}
-.producto div{
-    background-color: #fff;
-    justify-content: center;
-    display: grid;
-    padding: 0 20%;
-}
-/*.producto:hover{
-    transform: translate(0, -10px);
-}*/
-
-.vector{
-    padding-top: 3em;
+    justify-content: space-between;
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
+    padding: 5% 5%;
 }
 
-.producto h2{
-    padding-top: 1em;
+.producto div{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    align-items: center;
+    padding: 0 2%;
+}
+
+.producto div h2{
     text-align: center;
-    font-size: 2em;
-    color: #003862;
+    font-size: 1.4em;
+    padding-bottom: 0.5em;
+    color: black;
 }
 
-.producto img{
-    width: 70%;
-    margin: 0 15%;
+.producto div div{
+    width: 80%;
 }
 
-/*.producto button{
-    margin: 2em 0;
-    border: 0;
-    background-color: #003862;
-    padding: 0.5em 0;
+.producto div div img{
+    width: 90%;
+}
+
+/*producto div div div button{
+    background-color: rgb(13, 110, 245);
+    padding: 5% 0;
 }
 
 .producto button:hover{
     cursor: pointer;
     transform: scale(1.1);
-}
-
-.producto a{
-    padding: 2em 2em;
-    height: 100vh;
-    color: #fff;
-    text-decoration: none;
-    height: 100%;
-    width: 100%;
 }*/

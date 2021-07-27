@@ -4,6 +4,7 @@ import { UseCart } from '../Context/Cartcontext';
 import {Button, Table} from 'react-bootstrap';
 import "@firebase/firestore"
 import {getFireStore} from '../firebase'
+import '../CSS/Style_cart.css'
 
 
 export default function Cart(){
@@ -40,8 +41,8 @@ export default function Cart(){
 
 
     return(
-        <div>
-            <center>Carrito</center>
+        <div className='carrito'>
+            <h1>Carrito</h1>
             <Table striped bordered hover>
                 <thead>
                     <tr>
@@ -53,11 +54,9 @@ export default function Cart(){
                     <th><Button variant="danger" onClick={()=>clear()}>Limpiar carro</Button></th>
                     </tr>
                 </thead>
-                <tbody>
-                    {
-                        mostrar()
-                    }   
-                </tbody>
+                {
+                    mostrar()
+                }   
             </Table>
             <Button variant="success" onClick={sendOrder}>Terminar compra</Button>
         </div>
